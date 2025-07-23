@@ -28,7 +28,12 @@ class Scanner:
                     return True
 
                 # Check for common malware patterns using regular expressions
-                common_patterns = [r'malware_pattern_1', r'malware_pattern_2']
+                common_patterns = [
+                                   r'(powershell.exe\s+-enc)',            # common obfuscated PowerShell
+                                   r'(cmd\.exe\s+/c\s+)',                 # suspicious command execution
+                                   r'(eval\(.+\))',                       # suspicious JS/PHP function
+                                   r'(base64_decode\()'
+                                   ]
                 for pattern in common_patterns:
                     if re.search(pattern, content.decode('utf-8', errors='ignore')):
                         print(
@@ -53,7 +58,7 @@ class Scanner:
 
 
 if __name__ == "__main__":
-    virus_db_directory = "/path/to/virus_database"
+    virus_db_directory = "virus_signature"
     scanner = Scanner(virus_db_directory)
     directory_to_scan = "/path/to/scan"
 

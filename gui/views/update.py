@@ -9,7 +9,7 @@ class Update(customtkinter.CTkFrame):
         self.update_label = customtkinter.CTkLabel(
 
 
-            self, text="Update Guardian AI", font=customtkinter.CTkFont(size=20, weight="bold"))
+            self, text="Update Ahavah AI", font=customtkinter.CTkFont(size=20, weight="bold"))
 
         self.update_label.pack(pady=(20, 10))
 

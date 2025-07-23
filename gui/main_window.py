@@ -9,10 +9,10 @@ class Main_window(CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Guardian AI - Antivirus")
+        self.title("Ahavah AI - Antivirus")
         self.geometry("1100x580")
 
-        self.grid_rowconfigure(0, weight=1)g
+        self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
 
         self.logo_image = CTkImage(
@@ -45,7 +45,7 @@ class Main_window(CTk):
             self.navigation_frame.grid_rowconfigure(i + 1, weight=1)
 
         self.navigation_frame_label = CTkLabel(
-            self.navigation_frame, text="  Guardian AI", image=self.logo_image,
+            self.navigation_frame, text="  Ahavah AI", image=self.logo_image,
             compound="left", font=CTkFont(size=15, weight="bold"))
         self.navigation_frame_label.grid(row=0, column=0, padx=20, pady=15)
 
